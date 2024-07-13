@@ -8,4 +8,4 @@ Partner: Darron King
 CSC 172 Summer 2024
 Lab 2: Linked Lists
 
-This lab and code is meant explore linked lists. Linked lists will be implemented with their relevent functions.
+This lab and code is meant to explore linked lists. Linked lists will be implemented with their relevant functions, such as lookup, printlist, insert, etc.

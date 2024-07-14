@@ -1,4 +1,4 @@
-# CSC172_01
+# CSC172_02
 
 Ethan Chang <br />
 echang28@u.rochester.edu

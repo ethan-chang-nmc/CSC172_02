@@ -9,8 +9,8 @@
 
 /*testing
  *Expected Output:
- *First
  *Third
+ *First
 */
 public class TestLab02 
 {

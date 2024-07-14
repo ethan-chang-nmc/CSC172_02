@@ -7,12 +7,16 @@
 *07/14/2024: Creating Linked List and Functions
 */
 
-/*testing*/
+/*testing
+ *Expected Output:
+ *First
+ *Third
+*/
 public class TestLab02 
 {
   public static void main(String[] args) 
   {
-    LinkedListImp testlist = new LinkedListImp(); //create linked list
+    LinkedListImp testList = new LinkedListImp(); //create linked list
     //Insert values into the linked list then print
     testList.insert("First");
     testList.insert("Second");

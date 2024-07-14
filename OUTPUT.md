@@ -4,5 +4,5 @@ echang28@u.rochester.edu
 Code compiled and run on VS code
 
 Expected output: <br/>
-First <br/>
-Third
+Third <br/>
+First

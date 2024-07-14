@@ -46,6 +46,10 @@ public class LinkedListImp implements MyLinkedList
   /*Creates a new node with x as data and adds it to the front of the linked list: Runtime O(1) since operation # stays the same no matter size n*/
   public static void insert(Object x)
   {
+    if (lookup(x) == True) //checks to see if value already exists inside the linked list
+    {
+      return; //if value is in list, do not insert the value into the list
+    }
     MyNode newNode = new MyNode(); //makes new node
     NewNode.data = x; //set that data in new node to x
     NewNode.next = head; //have next in new node point to next element in linked list (null if end)
@@ -76,5 +80,38 @@ public class LinkedListImp implements MyLinkedList
       lookNode = lookNode.next; //move to next node in list
     }
     return false; //return false if item was not found in array
+  }
+
+  /*Implements a delete function that deletes the value if it is in the linked list*/
+  public static boolean lookup(Object x)
+  {
+    if (lookup(x) == False) //checks to see if value is inside the linked list
+    {
+      return; //if value is not in list, returns (does nothing) 
+    }
+    MyNode delNode = head; //temporary holder for current node
+    MyNode prevNode = null; // To keep track of the previous node
+
+    // Iterate through the linked list
+    while (delNode != null) 
+    {
+      // If the current node equals x, remove this node
+      if (delNode.data.equals(x)) 
+      {
+        // First node case
+        if (prevNode == null) 
+        {
+          head = delNode.next; //Move the head to the next node
+        } 
+        else 
+        {
+          prevNode.next = delNode.next; //Link previous node with next node
+        }
+        return; // Node deleted, exit the method
+      }
+    // Move to the next node
+    prevNode = delNode;
+    delNode = delNode.next;
+    }
   }
 }

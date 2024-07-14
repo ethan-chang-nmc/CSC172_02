@@ -7,29 +7,29 @@
 *07/14/2024: Creating Linked List and Functions
 */
 
-*Implementation of methods in interface MyLinkedLIst*/
+/*Implementation of methods in interface MyLinkedLIst*/
 public class LinkedListImp implements MyLinkedList 
 {
   MyNode head = null; //creates and sets head node to null
 
   /*Creates a new node with x as data and adds it to the front of the linked list: Runtime O(1) since operation # stays the same no matter size n*/
-  public static void insert(Object x)
+  public void insert(Object x)
   {
-    if (lookup(x) == True) //checks to see if value already exists inside the linked list
+    if (lookup(x) == true) //checks to see if value already exists inside the linked list
     {
       return; //if value is in list, do not insert the value into the list
     }
     MyNode newNode = new MyNode(); //makes new node
-    NewNode.data = x; //set that data in new node to x
-    NewNode.next = head; //have next in new node point to next element in linked list (null if end)
+    newNode.data = x; //set that data in new node to x
+    newNode.next = head; //have next in new node point to next element in linked list (null if end)
     head = newNode; //set head to first element in the linked list
   }
 
   /*Iterates through linked list and prints each element: Runtime O(n) since it has to go through list of n elements*/
-  public static void printList(Object x)
+  public void  printList()
   {
     MyNode printNode = head; //temporary holder for current node to be printed
-    while (head != null) //iterates through linked list until end
+    while (printNode != null) //iterates through linked list until end
     {
       System.out.println(printNode.data); //print the data of current node
       printNode = printNode.next; //have the current node be the next node in linked list
@@ -37,10 +37,10 @@ public class LinkedListImp implements MyLinkedList
   }
 
   /*Implements a lookup function to find if a value is in the linked list*/
-  public static boolean lookup(Object x)
+  public boolean lookup(Object x)
   {
     MyNode lookNode = head; //temporary holder for current node to be looked at
-    while (current != null) //iterates through linked list
+    while (lookNode != null) //iterates through linked list
     {
       if (lookNode.data.equals(x)) //if current node equal x, return true
       {
@@ -52,9 +52,9 @@ public class LinkedListImp implements MyLinkedList
   }
 
   /*Implements a delete function that deletes the value if it is in the linked list*/
-  public static void delete(Object x)
+  public void delete(Object x)
   {
-    if (lookup(x) == False) //checks to see if value is inside the linked list
+    if (lookup(x) == false) //checks to see if value is inside the linked list
     {
       return; //if value is not in list, returns (does nothing) 
     }

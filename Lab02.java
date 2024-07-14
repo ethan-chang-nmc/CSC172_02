@@ -17,6 +17,9 @@ public class Lab02
     myList.insert("First");
     myList.insert("Second");
     myList.insert("Third");
+    myList.insert("Second"); //check to see insert ignores if x is already in list
+    myList.delete("Four"); //check to see delete ignores if x is not in list
+    myList.delete("Second");
     myList.printList();
   }
 }
@@ -83,7 +86,7 @@ public class LinkedListImp implements MyLinkedList
   }
 
   /*Implements a delete function that deletes the value if it is in the linked list*/
-  public static boolean lookup(Object x)
+  public static void delete(Object x)
   {
     if (lookup(x) == False) //checks to see if value is inside the linked list
     {

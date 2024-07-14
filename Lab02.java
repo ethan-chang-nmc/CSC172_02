@@ -14,13 +14,13 @@ public class Lab02
   {
     LinkedListImp testlist = new LinkedListImp(); //create linked list
     //Insert values into the linked list then print
-    myList.insert("First");
-    myList.insert("Second");
-    myList.insert("Third");
-    myList.insert("Second"); //check to see insert ignores if x is already in list
-    myList.delete("Four"); //check to see delete ignores if x is not in list
-    myList.delete("Second");
-    myList.printList();
+    testList.insert("First");
+    testList.insert("Second");
+    testList.insert("Third");
+    testList.insert("Second"); //check to see insert ignores if x is already in list
+    testList.delete("Four"); //check to see delete ignores if x is not in list
+    testList.delete("Second");
+    testList.printList();
   }
 }
 
@@ -44,7 +44,7 @@ public interface MyLinkedList
 /*Implementation of methods in interface MyLinkedLIst*/
 public class LinkedListImp implements MyLinkedList 
 {
-  private MyNode head = null; //creates and sets head node to null
+  MyNode head = null; //creates and sets head node to null
 
   /*Creates a new node with x as data and adds it to the front of the linked list: Runtime O(1) since operation # stays the same no matter size n*/
   public static void insert(Object x)
@@ -56,7 +56,7 @@ public class LinkedListImp implements MyLinkedList
     MyNode newNode = new MyNode(); //makes new node
     NewNode.data = x; //set that data in new node to x
     NewNode.next = head; //have next in new node point to next element in linked list (null if end)
-    head = newNode //set head to first element in the linked list
+    head = newNode; //set head to first element in the linked list
   }
 
   /*Iterates through linked list and prints each element: Runtime O(n) since it has to go through list of n elements*/
